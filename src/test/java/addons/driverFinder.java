@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class DriverFinder {
+public class driverFinder {
 
   public static Optional<String> findChromeDriver() {
     return findDriver("chromedriver");

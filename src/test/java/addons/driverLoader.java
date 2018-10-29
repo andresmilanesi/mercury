@@ -5,7 +5,7 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-public class DriverLoader {
+public class driverLoader {
 
     public static WebDriver ffHeadless() {    	
   
