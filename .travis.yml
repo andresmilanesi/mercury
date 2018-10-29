@@ -1,0 +1,18 @@
+language: java
+sudo: required
+java:
+- 1.8.x
+addons:
+  apt:
+    packages:
+    - dbus-x11
+cache:
+  directories:
+  - "$HOME/.m2"
+  - drivers/ 
+install:
+- mvn clean compile -DskipTests
+script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - mvn test
