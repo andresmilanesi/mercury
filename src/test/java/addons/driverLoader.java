@@ -13,22 +13,18 @@ public class driverLoader {
         firefoxBinary.addCommandLineOptions("--headless");
       
         FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.setBinary(firefoxBinary);
-        
+        firefoxOptions.setBinary(firefoxBinary);        
         
         WebDriver nuevoDriver = new FirefoxDriver(firefoxOptions);
         
         return (nuevoDriver);
 }
-    public static WebDriver normal() {
-    		    
+    public static WebDriver normal() {   		    
 	    	 
-    			FirefoxBinary firefoxBinary = new FirefoxBinary();
-	        
+    			FirefoxBinary firefoxBinary = new FirefoxBinary();	        
 	      
 	        FirefoxOptions firefoxOptions = new FirefoxOptions();
-	        firefoxOptions.setBinary(firefoxBinary);
-	        
+	        firefoxOptions.setBinary(firefoxBinary);        
 	        
 	    		WebDriver nuevoDriver = new FirefoxDriver(firefoxOptions);
 	        
