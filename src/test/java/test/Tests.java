@@ -42,6 +42,19 @@ public class Tests {
 		pageReservation pageReservation = new pageReservation(driver);
 		pageReservation.assertReservationText();
 	}
+	@Test
+	public void flightReservation() {
+		pageLogin pageLogin = new pageLogin(driver);
+		pageLogin.login("mercury", "mercury");
+		pageReservation pageReservation = new pageReservation(driver);
+		pageReservation.selectPassengers(2);
+		pageReservation.selectFrom("London");
+		pageReservation.selectStartDate("April", 1);
+		pageReservation.selectTo("Paris");
+		pageReservation.selectEndDate("December", 1);
+		pageReservation.submitReservation();
+		pageReservation.assertReservationText2();
+	}
 	
 	@AfterMethod
 	public void tearDown() {
