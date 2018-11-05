@@ -1,10 +1,16 @@
 package test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.codehaus.plexus.util.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -58,7 +64,15 @@ public class Tests {
 	}
 	
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown(ITestResult result) {
+		if(!result.isSuccess()) {
+			File myScreenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(myScreenshot, new File("Error "+System.currentTimeMillis()+".png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 		driver.close();
 	}
 }
