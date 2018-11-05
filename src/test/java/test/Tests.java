@@ -53,7 +53,7 @@ public class Tests {
 		pageReservation.selectTo("Paris");
 		pageReservation.selectEndDate("December", 1);
 		pageReservation.submitReservation();
-		pageReservation.assertReservationText2();
+		pageReservation.assertReservationText2();		
 	}
 	
 	@AfterMethod

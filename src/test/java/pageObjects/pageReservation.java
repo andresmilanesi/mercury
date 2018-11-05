@@ -73,4 +73,5 @@ public class pageReservation {
 	public void assertReservationText2() {
 		Assert.assertTrue(driver.findElement(reservationText2).getText().contains("Select your departure"));
 	}
+	
 }
