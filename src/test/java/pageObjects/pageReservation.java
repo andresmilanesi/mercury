@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class pageReservation {
+	// Here all my webelements
 	private WebDriver driver;
 	private By reservationText;
 	private By passengersDrop;

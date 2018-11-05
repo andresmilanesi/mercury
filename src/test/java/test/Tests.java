@@ -42,6 +42,7 @@ public class Tests {
 		pageReservation pageReservation = new pageReservation(driver);
 		pageReservation.assertReservationText();
 	}
+	//Test a flight reservation
 	@Test
 	public void flightReservation() {
 		pageLogin pageLogin = new pageLogin(driver);
