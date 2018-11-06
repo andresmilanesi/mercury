@@ -1,2 +1,6 @@
 /target/
 /drivers/
+*.png
+.DS_Store
+/src/test/java/Configuration/
+/test-output/
